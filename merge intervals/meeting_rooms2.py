@@ -15,3 +15,8 @@ def find_sets(intervals):
             heapq.heappushpop(heap, intervals[i][1])
 
     return len(heap)
+
+"""
+    TC: O(nlogn)
+    SC: O(n)
+"""
