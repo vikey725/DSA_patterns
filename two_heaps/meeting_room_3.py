@@ -14,6 +14,8 @@ def most_booked(meetings, rooms):
             end, room = heapq.heappop(used_rooms)
             heapq.heappush(available_rooms, room)
 
+        # If no room is available, we retrieve the meeting with the smallest ending time from used_rooms . This is the room that will be 
+        # free as soon as possible. Hence, we will delay the current meeting until the meeting scheduled in this room ends.
         if not available_rooms:
             end, room = heapq.heappop(used_rooms)
             et = end + (et - st)
